@@ -26,10 +26,10 @@ All with optional top slider and footer.
 
 Display a (sidebar) navigation of a nodes children or siblings
 
-start:
-	0: top level is Nodes children
-	-1: top level is Nodes siblings
-depth: how many generations deep to recurse
+* start:
+	* 0: top level is Nodes children
+	* -1: top level is Nodes siblings
+* depth: how many generations deep to recurse
 
 ## TemplateHelper
 
