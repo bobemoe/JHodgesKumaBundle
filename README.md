@@ -2,7 +2,7 @@
 
 Adds various features to the KunstmaanBundles
 
-## Change the parent of a Page (Node)
+## Change the parent of a Node (Page)
 
 Unfortunately in the admin area it is not possible to change a Nodes parent, sometimes making reordering your content imposable.
 
