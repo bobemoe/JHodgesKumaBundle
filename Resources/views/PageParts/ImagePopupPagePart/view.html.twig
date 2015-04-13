@@ -1,0 +1,7 @@
+<div class="image-popup-pp">
+    {% if resource.image is not empty %}
+    	<a href="{{ asset(resource.image.url) }}">
+    		<img src="{{ asset(resource.image.url) | imagine_filter('image_popup_thumbnail') }}" {% if resource.imageAltText is not empty %}alt="{{ resource.imageAltText }}"{% endif %} />
+    	</a>
+    {% endif %}
+</div>

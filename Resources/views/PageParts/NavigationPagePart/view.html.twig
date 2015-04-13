@@ -1,0 +1,14 @@
+<div class="navigation-pp">
+	{% if nodemenu is defined %}
+		<nav role="navigation">
+			{% if resource.start == -1 %}
+        		{% include 'JHodgesKumaBundle:Layout:navigation.html.twig' with {'items': nodemenu.current.parent.children, 'depth':resource.depth} %}
+        	{% else %}
+        		{% include 'JHodgesKumaBundle:Layout:navigation.html.twig' with {'items': nodemenu.current.children, 'depth':resource.depth} %}
+        	{% endif %}
+		</nav>
+    {% else %}
+    	Start: {{ resource.start }}<br/>
+    	Depth: {{ resource.depth }}
+    {% endif %}
+</div>

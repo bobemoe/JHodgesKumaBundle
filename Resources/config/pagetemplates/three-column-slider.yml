@@ -1,0 +1,11 @@
+name: "Slider + Three column page"
+rows:
+    - regions:
+        - { name: "slider", span: 12 }
+    - regions:
+        - { name: "left_column", span: 3 }
+        - { name: "main", span: 6 }
+        - { name: "right_column", span: 3 }
+    - regions:
+        - { name: "footer", span: 12 }
+template: "JHodgesKumaBundle::Pages\\Common\\three-column-slider-pagetemplate.html.twig"

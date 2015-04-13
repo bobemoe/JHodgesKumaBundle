@@ -1,0 +1,12 @@
+{
+    "name": "jhodges/kuma-bundle",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-0": {            
+            "JHodges\\KumaBundle": ""
+        }
+    },
+    "target-dir": "JHodges/KumaBundle"
+}

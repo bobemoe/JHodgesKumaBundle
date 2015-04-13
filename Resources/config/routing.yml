@@ -1,0 +1,4 @@
+#jhodgeskumabundle_default:
+#    resource: "@JHodgesKumaBundle/Controller/DefaultController.php"
+#    type:     annotation
+#    prefix:   /

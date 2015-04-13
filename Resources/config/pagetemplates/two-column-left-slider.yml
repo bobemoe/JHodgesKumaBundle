@@ -1,0 +1,10 @@
+name: "Slider + Two column page (left sidebar)"
+rows:
+    - regions:
+        - { name: "slider", span: 12 }
+    - regions:
+        - { name: "left_column", span: 3 }
+        - { name: "main", span: 9 }
+    - regions:
+        - { name: "footer", span: 12 }
+template: "JHodgesKumaBundle::Pages\\Common\\two-column-left-slider-pagetemplate.html.twig"

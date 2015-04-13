@@ -1,0 +1,11 @@
+parameters:
+#    j_hodges_kuma.example.class: JHodges\KumaBundle\Example
+
+services:
+#    j_hodges_kuma.example:
+#        class: %j_hodges_kuma.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+    jhodges.kuma.template:
+        class: JHodges\KumaBundle\Service\Template
+        arguments: ["@doctrine.orm.entity_manager", "@security.context", "@kunstmaan_admin.acl.helper"]

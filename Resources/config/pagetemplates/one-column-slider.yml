@@ -1,0 +1,9 @@
+name: "Slider + One column page"
+rows:
+    - regions:
+        - { name: "slider", span: 12 }
+    - regions:
+        - { name: "main", span: 12 }
+    - regions:
+        - { name: "footer", span: 12 }
+template: "JHodgesKumaBundle::Pages\\Common\\one-column-slider-pagetemplate.html.twig"
