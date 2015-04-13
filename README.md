@@ -1,6 +1,7 @@
 # JHodgesKumaBundle
 
-Adds various features to the KunstmaanBundles
+Adds various usefull features to the [Kunstmaan Bundles CMS](https://packagist.org/packages/kunstmaan/bundles-standard-edition)
+2.x only, untested on v3.x
 
 ## Change the parent of a Node (Page)
 
