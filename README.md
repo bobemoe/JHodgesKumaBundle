@@ -34,9 +34,16 @@ Display a (sidebar) navigation of a nodes children or siblings
 
 ## TemplateHelper
 
-Merges in the nodemenu, page and other variables required for your templates to work with standard Symfony controllers and routing.
+Returns the nodemenu, page and other variables required for your Kunstmaan style templates and navigations to work with standard Symfony controllers and routing.
 
-Specify a page slug and locale to have the specified page highlighted in the nav use its title etc.
+To use, create a new content page and set its title, slug, name, nav position etc as you wish.  It makes sense to set the slug so that the URI matches your custom route. Make sure your routing is loaded before the Kunstmaan slug router, then when you click the page in the nav you will actually be take to your custom route, however (assuming your template extends your main Kunstmaan template) the page will be rendered with the correct nav item selected, and title and SEO details from the admin.
+
+```php
+$this->get('jhodges.kuma.template')->getVars($slug,$locale,$vars=array())
+```
+
+* Specify a $slug and $locale to have the specified page highlighted in the nav use its title etc.
+* Optionally also provide $vars array that will be merged in with the kuma vars.
 
 ```php
 	public function helloAction($name){
@@ -48,4 +55,4 @@ Specify a page slug and locale to have the specified page highlighted in the nav
 
 ## ImagePopupPagePart
 
-TODO: Select an Image and have a thumbnail generated, when clicked lightbox popup, cycle through gallery.
+TODO: Select an Image to display as a thumbnail, when clicked lightbox popup, cycle through gallery.
