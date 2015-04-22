@@ -1,0 +1,48 @@
+<section class="slider-pp">
+	<div class="slider-pp__flexslider js-flexslider flexslider" data-animation="slide" data-control-nav="true" data-slideshow="slideshow" data-start-at="0">
+		<ul class="slides">
+			{% for image in resource.images %}
+				<li>
+					{% if image.image is not empty %}
+						<img src="{{ asset(image.image.url) }}" />
+					{% endif %}
+					<div class="slider-pp__caption text-center">
+						{% if image.title is not empty %}
+						<h1 class="slider-pp__caption__title">
+							{{ image.title }}
+						</h1>
+						{% endif %}
+						{% if image.description is not empty %}
+						<p class="slider-pp__caption__text">
+							{{ image.description }}
+						</p>
+						{% endif %}
+						{% if image.buttonUrl is not empty %}
+						<a href="{{ image.buttonUrl }}" class="btn btn-primary btn-lg" {% if image.buttonNewWindow %}target="_blank"{% endif %} type="button">
+							{{ image.buttonText }}
+						</a>
+						{% endif %}
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<nav class="slider--pp__thumbs js-thumbs">
+		<div class="slider-pp__thumbs-wrapper">
+			{% for pp in resource.images %}
+				<div class="slider-pp__thumbs--item js-thumbs--item">
+					{% if pp.title is not empty %}
+					<h4 class="slider-pp__thumbs__title">
+						{{ pp.title }}
+					</h4>
+					{% endif %}
+					{% if pp.tickText is not empty %}
+					<p class="slider-pp__thumbs__text">
+						{{ pp.tickText }}
+					</p>
+					{% endif %}
+				</div>
+			{% endfor %}
+		</div>
+	</nav>
+</section>

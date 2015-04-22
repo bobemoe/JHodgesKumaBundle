@@ -5,12 +5,14 @@ namespace JHodges\KumaBundle\Form\PageParts;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Form\FormBuilderInterface;
 
-/**
- * ChildNavPagePartAdminType
- */
-class ChildNavPagePartAdminType extends \Symfony\Component\Form\AbstractType
-{
+use JHodges\KumaBundle\Form\GalleryImageAdminType;
 
+
+/**
+ * ContactInfoAdminType
+ */
+class GalleryPagePartAdminType extends \Symfony\Component\Form\AbstractType
+{
     /**
      * Builds the form.
      *
@@ -24,6 +26,23 @@ class ChildNavPagePartAdminType extends \Symfony\Component\Form\AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         parent::buildForm($builder, $options);
+
+        $builder->add('title', 'text', array(
+            'required' => false,
+        ));
+
+        $builder->add('images', 'collection', array(
+            'type' => new GalleryImageAdminType(),
+            'allow_add' => true,
+            'allow_delete' => true,
+            'by_reference' => false,
+            'cascade_validation' => true,
+            'attr' => array(
+                'nested_form' => true,
+                'nested_form_min' => 1,
+                //'nested_form_max' => 4,
+            )
+        ));
     }
 
     /**
@@ -33,7 +52,7 @@ class ChildNavPagePartAdminType extends \Symfony\Component\Form\AbstractType
      */
     public function getName()
     {
-        return 'jhodges_kumabundle_childnavpageparttype';
+        return 'jhodges_kumabundle_gallery_pagepart_type';
     }
 
     /**
@@ -44,7 +63,9 @@ class ChildNavPagePartAdminType extends \Symfony\Component\Form\AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => '\JHodges\KumaBundle\Entity\PageParts\ChildNavPagePart'
+            'data_class' => '\JHodges\KumaBundle\Entity\PageParts\GalleryPagePart',
+            'cascade_validation' => true,
         ));
     }
 }
+

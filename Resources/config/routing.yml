@@ -2,3 +2,8 @@
 #    resource: "@JHodgesKumaBundle/Controller/DefaultController.php"
 #    type:     annotation
 #    prefix:   /
+
+jhodges_dashboard:
+    resource: "@JHodgesKumaBundle/Controller/DashboardController.php"
+    type:     annotation
+    prefix:   /admin/dashboard

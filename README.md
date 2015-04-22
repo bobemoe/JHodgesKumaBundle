@@ -21,7 +21,7 @@ Various templates for easy layout switching of content pages:
 * 2 column with left or right sidebar
 * 3 column, sidebars or equal widths
 
-All with optional top slider and footer.
+All with header and footer.
 
 ## NavigationPagePart
 
@@ -31,6 +31,13 @@ Display a (sidebar) navigation of a nodes children or siblings
 	* 0: top level is Nodes children
 	* -1: top level is Nodes siblings
 * depth: how many generations deep to recurse
+
+To enable, add the following to the types section of the config/pageparts region that you want to allow a gallery to be added to.
+
+```yml
+types:
+    - { name: Navigation, class: JHodges\KumaBundle\Entity\PageParts\NavigationPagePart }
+```
 
 ## TemplateHelper
 
@@ -46,6 +53,27 @@ Specify a page slug and locale to have the specified page highlighted in the nav
 	}
 ```
 
-## ImagePopupPagePart
+## GalleryPagePart
 
-TODO: Select an Image and have a thumbnail generated, when clicked lightbox popup, cycle through gallery.
+Allows adding of images to a gallery, currently displays as the default slider, will soon be adding a lightbox style popup gallery template.
+
+To enable, add the following to the types section of the config/pageparts region that you want to allow a gallery to be added to.
+
+```yml
+types:
+    - { name: Gallery, class: JHodges\KumaBundle\Entity\PageParts\GalleryPagePart }
+```
+
+## HTML/iFrame Admin Dashboard
+
+Replacement for the default Google Analytics dashboard.  Useful for those of us who use Piwik or another analytics package.  Simply change the dashboard rout config variable and add another parameter to your config, with the HTML or iFrame code you want to use on the dashboard:
+
+**config.yml**
+```yml
+kunstmaan_admin:
+    dashboard_route: 'jhodges_dashboard'
+
+parameters:
+    jhodges.dashboard.html: '<iframe src="http://piwik.domain.co.uk/index.php?module=Widgetize&action=iframe" width="100%" height="2000px"></iframe>'
+
+```

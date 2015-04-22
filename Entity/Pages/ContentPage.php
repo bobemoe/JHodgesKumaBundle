@@ -58,7 +58,7 @@ class ContentPage extends \Kunstmaan\NodeBundle\Entity\AbstractPage implements \
 			'JHodgesKumaBundle:main',
 			'JHodgesKumaBundle:left-column',
 			'JHodgesKumaBundle:right-column',
-			'JHodgesKumaBundle:slider',
+			'JHodgesKumaBundle:header',
 			'JHodgesKumaBundle:footer',
 		);
 	}
@@ -70,15 +70,11 @@ class ContentPage extends \Kunstmaan\NodeBundle\Entity\AbstractPage implements \
 	{
 		return array(
 			'JHodgesKumaBundle:one-column',
-			'JHodgesKumaBundle:one-column-slider',
 			'JHodgesKumaBundle:two-column-left',
-			'JHodgesKumaBundle:two-column-left-slider',
 			'JHodgesKumaBundle:two-column-right',
-			'JHodgesKumaBundle:two-column-right-slider',
+			'JHodgesKumaBundle:two-column-equal',
 			'JHodgesKumaBundle:three-column',
-			'JHodgesKumaBundle:three-column-slider',
 			'JHodgesKumaBundle:three-column-equal',
-			'JHodgesKumaBundle:three-column-equal-slider',
 		);
 	}
 

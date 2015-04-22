@@ -1,0 +1,10 @@
+name: "Two column page (equal)"
+rows:
+    - regions:
+        - { name: "header", span: 12 }
+    - regions:
+        - { name: "main", span: 6 }
+        - { name: "right_column", span: 6 }
+    - regions:
+        - { name: "footer", span: 12 }
+template: "JHodgesKumaBundle::Pages\\Common\\two-column-equal-pagetemplate.html.twig"

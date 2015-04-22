@@ -1,6 +1,8 @@
 name: "One column page"
 rows:
     - regions:
+        - { name: "header", span: 12 }
+    - regions:
         - { name: "main", span: 12 }
     - regions:
         - { name: "footer", span: 12 }

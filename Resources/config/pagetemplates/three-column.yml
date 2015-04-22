@@ -1,6 +1,8 @@
 name: "Three column page"
 rows:
     - regions:
+        - { name: "header", span: 12 }
+    - regions:
         - { name: "left_column", span: 3 }
         - { name: "main", span: 6 }
         - { name: "right_column", span: 3 }
