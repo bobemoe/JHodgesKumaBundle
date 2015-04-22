@@ -1,5 +1,9 @@
 {
     "name": "jhodges/kuma-bundle",
+    "description": "Adds various usefull features to the Kunstmaan Bundles CMS",
+    "keywords": ["kunstmaan","dashboard","piwik","content","parent","navigation","gallery","slider","template"],
+    "homepage": "https://github.com/bobemoe/JHodgesKumaBundle",
+    "license": "GPL",
     "require": {
         "php": ">=5.4.0"
     },
