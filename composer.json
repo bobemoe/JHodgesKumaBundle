@@ -1,6 +1,13 @@
 {
     "name": "jhodges/kuma-bundle",
-    "description": "Adds various usefull features to the Kunstmaan Bundles CMS",
+    "description": "Adds various usefull features to the Kunstmaan Bundles CMS
+        Change the parent of a Node (Page)
+        ContentPage column templates
+        NavigationPagePart
+        TemplateHelper
+        GalleryPagePart
+        HTML/iFrame Admin Dashboard
+    ",
     "keywords": ["kunstmaan","dashboard","piwik","content","parent","navigation","gallery","slider","template"],
     "homepage": "https://github.com/bobemoe/JHodgesKumaBundle",
     "license": "GPL",

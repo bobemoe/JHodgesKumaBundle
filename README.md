@@ -3,6 +3,14 @@
 Adds various usefull features to the [Kunstmaan Bundles CMS](https://packagist.org/packages/kunstmaan/bundles-standard-edition)
 2.x only, untested on 3.x
 
+Install with composer and add the bundle to AppKernel.php
+
+```php
+            new JHodges\KumaBundle\JHodgesKumaBundle(),
+```            
+
+The following features are provided:
+
 ## Change the parent of a Node (Page)
 
 Unfortunately in the admin area it is not possible to change a Nodes parent, sometimes making reordering your content imposable.
@@ -73,7 +81,14 @@ types:
 
 ## HTML/iFrame Admin Dashboard
 
-Replacement for the default Google Analytics dashboard.  Useful for those of us who use Piwik or another analytics package.  Simply change the dashboard rout config variable and add another parameter to your config, with the HTML or iFrame code you want to use on the dashboard:
+Replacement for the default Google Analytics dashboard.  Useful for those of us who use Piwik or another analytics package.  Simply add the routing, change the dashboard route config variable and add another parameter to your config, with the HTML or iFrame code you want to use on the dashboard:
+
+**routing.yml**
+```yml
+j_hodges_kuma:
+    resource: "@JHodgesKumaBundle/Resources/config/routing.yml"
+    prefix:   /
+```    
 
 **config.yml**
 ```yml
