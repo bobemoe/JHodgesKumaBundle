@@ -8,4 +8,4 @@ services:
 
     jhodges.kuma.template:
         class: JHodges\KumaBundle\Service\Template
-        arguments: ["@doctrine.orm.entity_manager", "@security.context", "@kunstmaan_admin.acl.helper"]
+        arguments: ["@doctrine.orm.entity_manager", "@security.context", "@kunstmaan_admin.acl.helper", "@kunstmaan_node.node_menu"]
